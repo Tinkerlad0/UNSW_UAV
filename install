@@ -1,0 +1,11 @@
+#Installing MAVProxy, Ardupilot and SITL software
+
+##MAVProxy
+
+######Commands in sequence
+
+sudo apt-get install python-dev python-opencv python-wxgtk3.0 python-pip python-matplotlib python-pygame python-lxml
+python --version
+pip install --upgrade pip
+pip install MAVProxy
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc

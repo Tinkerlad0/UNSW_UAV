@@ -1,0 +1,41 @@
+#MAVProxy
+sudo apt-get install python-dev python-opencv python-wxgtk3.0 python-pip python-matplotlib python-pygame python-lxml
+nano .bashrc
+###### export PATH=$PATH:$HOME/.local/bin
+sudo adduser uav dialout
+sudo apt-get install python-espeak
+git clone git://github.com/Tinkerlad0/UNSW_UAV.git
+
+
+#cuav
+cd
+sudo apt-get install libusb-1.0.0-dev libdc1394-22-dev libopencv-dev python-pyexiv2 python-httplib2 libjpeg-turbo-progs
+git clone git://github.com/tridge/cuav.git
+cd cuav
+sudo python setup.py build install
+
+#SITL
+cd
+git clone it://github.com/ArduPilot/ardupilot.git
+##JSBSim
+git clone git://github.com/tride/jsbsim.git
+sudo apt-get install libtool automake autoconf libexpat1-dev
+wget ftp://ftp.gnu.org/pub/gnu/libtool/libtool-2.4.6.tar.gz
+tar -xzvf libtool-2.4.6.tar.gz
+cd libtool-2.4.6
+./configure
+make
+sudo make install
+cd ../jsbsim/
+./autogen.sh --enable-libraries
+make
+sudo apt-get install python-serial
+sudo apt-get install ccache gawk python-decorator python-pexpect python-ptyprocess python-scipy
+sudo -H pip install pymavlink MAVProxy
+cd
+nano .bashrc
+######export PATH=$PATH:$HOME/jsbsim/src
+######export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+######export PATH=/usr/lib/ccache:$PATH
+
+
