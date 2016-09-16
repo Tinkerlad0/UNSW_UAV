@@ -1,0 +1,6 @@
+output sysid 101 127.0.0.1:666
+
+output add udpout:54.206.123.106:49471
+output add udpout:54.206.13.6:49471
+
+set source_system 200
